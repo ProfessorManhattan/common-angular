@@ -29,11 +29,7 @@ if [ "${container:=}" != 'docker' ]; then
   success "Node.js, Task, jq, and yq are all installed"
 fi
 
-if [ -f config.xml ]; then
-  export REPO_SUBTYPE=app
-else
-  export REPO_SUBTYPE=website
-fi
+export REPO_SUBTYPE=$(yq e '.vars.REPOSITORY_SUBTYPE' Taskfile.yml)
 
 cp ".common/files-$REPO_SUBTYPE/Taskfile.yml" Taskfile.yml
 task common:update
