@@ -7,7 +7,7 @@
 #   This script performs maintenance on this repository. It includes several bash script
 #   libraries and then it:
 #
-#   1. Ensures Node, jq, and Task are installed
+#   1. Ensures Node, jq, Task, and yq are installed
 #   2. Bootstraps the project by using Task to run initialization tasks which bootstrap the project
 #   3. Notifies the user about missing software dependencies that require root priviledges to install
 
@@ -24,13 +24,24 @@ if [ "${container:=}" != 'docker' ]; then
   ensureNodeSetup &
   ensureJQInstalled &
   ensureTaskInstalled &
+  ensureYQInstalled &
   wait
-  success "Node.js, Task, and jq are all installed"
+  success "Node.js, Task, jq, and yq are all installed"
 fi
 
-task requirements update
+if [ -f config.xml ]; then
+  export REPO_SUBTYPE=app
+else
+  export REPO_SUBTYPE=website
+fi
+
+cp ".common/files-$REPO_SUBTYPE/Taskfile.yml" Taskfile.yml
+task common:update
 
 if [ "${container:=}" != 'docker' ]; then
   missingDockerNotice
-  missingVirtualBoxNotice
 fi
+
+success "Bootstrap process complete!"
+
+cp .common/.start.sh .start.sh &
