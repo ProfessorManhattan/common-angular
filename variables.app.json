@@ -16,14 +16,16 @@
   "github_prefix": "",
   "group": "none",
   "hbs": {
+    "angular": true,
     "ansible": false,
+    "app": true,
     "dockerfile": false,
     "playbook": false,
     "python": false,
     "yaml": false
   },
   "header_description_post": "",
-  "header_description_pre": "",
+  "header_description_pre": "An app developed by ",
   "header_title_post": "",
   "header_title_pre": "",
   "license": "MIT",
@@ -107,6 +109,6 @@
       "wrangler": "https://gitlab.com/megabyte-labs/wrangler"
     }
   },
-  "subgroup": "[[ Needs to be setup. Set this in the common repository for this type of project ]]",
+  "subgroup": "app",
   "title": "[[ package.json .blueprint.title - See CONTRIBUTING.md ]]"
 }

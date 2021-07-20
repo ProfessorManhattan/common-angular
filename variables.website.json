@@ -13,19 +13,21 @@
   "email": {
     "help": "help@megabyte.space"
   },
-  "github_prefix": "",
+  "github_prefix": "website-",
   "group": "none",
   "hbs": {
+    "angular": true,
     "ansible": false,
     "dockerfile": false,
     "playbook": false,
     "python": false,
+    "website": true,
     "yaml": false
   },
   "header_description_post": "",
-  "header_description_pre": "",
+  "header_description_pre": "The source code of a website developed by ",
   "header_title_post": "",
-  "header_title_pre": "",
+  "header_title_pre": "Website Source: ",
   "license": "MIT",
   "link": {
     "chat": "https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/",
@@ -107,6 +109,6 @@
       "wrangler": "https://gitlab.com/megabyte-labs/wrangler"
     }
   },
-  "subgroup": "[[ Needs to be setup. Set this in the common repository for this type of project ]]",
+  "subgroup": "website",
   "title": "[[ package.json .blueprint.title - See CONTRIBUTING.md ]]"
 }
