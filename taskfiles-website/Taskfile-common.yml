@@ -321,14 +321,15 @@ tasks:
         msg: 'Cannot perform a spell check because there are no staged files'
 
   update:
-    deps: [update-common, update-ansible-galaxy-id, update-project]
+    deps: [update-common, update-project]
     desc: Refresh the project with the latest upstream code and ensure blueprint data has propagated
     cmds:
-      - task: _update
+      - task: update-start
       - task: update-all
+      - task: update-finish
       - bash .common/log success "Successfully updated the project with the latest upstream changes"
 
-  _update:
+  update-start:
     deps: [requirements, update-start-sh, update-taskfile, update-variables]
 
   update-common:
@@ -343,7 +344,12 @@ tasks:
       - sh: 'type git &> /dev/null'
         msg: 'git is not installed! You can install it by running `task software:git`.'
 
-  update-project: git pull origin master
+  update-finish:
+    deps: []
+
+  update-project:
+    cmds:
+      - git pull origin master
 
   update-start-sh:
     cmds:
@@ -492,6 +498,26 @@ tasks:
       - sh: 'type hbs &> /dev/null'
         msg: '`hbs-cli` is not installed globally. Install all the requirements by running `task common:requirements`.'
 
+  update-latestos:
+    deps:
+      - python-requirements
+      - :software:jq
+    vars:
+      TAG:
+        sh: jq -r '.variables.vagrant_tag' template.json
+    cmds:
+      - |
+        if [[ '{{.TAG}}' != 'macos' ]]; then
+          latestos {{.TAG}}
+        fi
+    status:
+      - '[[ "{{.TAG}}}" == "macos" ]]'
+    preconditions:
+      - sh: test -f template.json
+        msg: 'The `template.json` file is missing from the root of this project.'
+      - sh: type latestos &> /dev/null
+        msg: 'The `latestos` pip package is not installed. Try running `task common:python-requirements`.'
+
   update-readme:
     deps: [npm-prettier, npm-readme]
     vars:
@@ -514,6 +540,35 @@ tasks:
         msg: '`@appnest/readme` is not installed globally. Install all the requirements by running `task common:requirements`.'
       - sh: type prettier &> /dev/null
         msg: '`prettier` is not installed globally. Install all the requirements by running `task common:requirements`.'
+
+  update-readme-packer:
+    cmds:
+      - task: _update-readme-packer
+        vars:
+          TYPE: hyperv-iso
+      - task: _update-readme-packer
+        vars:
+          TYPE: parallels-iso
+      - task: _update-readme-packer
+        vars:
+          TYPE: qemu
+      - task: _update-readme-packer
+        vars:
+          TYPE: virtualbox-iso
+      - task: _update-readme-packer
+        vars:
+          TYPE: vmware-iso
+
+  _update-readme-packer:
+    cmds:
+      - |
+        if ! grep -q '"type": "{{.TYPE}}"' template.json; then
+          if [[ '' == 'darwin' ]]; then
+            sed -i .bak '/SUPPORTED_OS_{{.TYPE}}/d' README.md && rm README.md.bak
+          elif [[ '' == 'linux' ]]; then
+            sed -i '/SUPPORTED_OS_{{.TYPE}}/d' README.md
+          fi
+        fi
 
   update-sort:
     cmds:
