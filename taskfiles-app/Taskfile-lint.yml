@@ -6,7 +6,7 @@ tasks:
     desc: Lint the project by running all the linters in parallel
     deps:
       - formatting
-      - shellcheck
+      - scripts
 
   formatting:
     deps:
