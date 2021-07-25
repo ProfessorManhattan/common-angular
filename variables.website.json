@@ -113,6 +113,7 @@
       "wrangler": "https://gitlab.com/megabyte-labs/wrangler"
     }
   },
+  "sharp_instructions": [],
   "subgroup": "website",
   "title": "[[ package.json .blueprint.title - See CONTRIBUTING.md ]]"
 }
