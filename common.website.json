@@ -1,10 +1,1 @@
-{
-  "github_prefix": "website-",
-  "hbs": {
-    "angular": true,
-    "website": true
-  },
-  "header_description_pre": "The source code of a website developed by ",
-  "header_title_pre": "Website Source: ",
-  "subgroup": "website"
-}
+{}
