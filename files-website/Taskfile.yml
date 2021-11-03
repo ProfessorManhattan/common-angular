@@ -7,9 +7,9 @@ includes:
   fix: ./.common/taskfiles-website/Taskfile-fix.yml
   lint: ./.common/taskfiles-website/Taskfile-lint.yml
   software: ./.common/taskfiles-website/Taskfile-{{OS}}.yml
+
 output: prefixed
 
 vars:
   REPOSITORY_SUBTYPE: website
   REPOSITORY_TYPE: angular
-
