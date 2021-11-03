@@ -1,15 +1,15 @@
 ---
 version: '3'
 
+includes:
+  angular: ./.common/taskfiles-website/Taskfile-angular.yml
+  common: ./.common/taskfiles-website/Taskfile-common.yml
+  fix: ./.common/taskfiles-website/Taskfile-fix.yml
+  lint: ./.common/taskfiles-website/Taskfile-lint.yml
+  software: ./.common/taskfiles-website/Taskfile-{{OS}}.yml
 output: prefixed
 
 vars:
   REPOSITORY_SUBTYPE: website
   REPOSITORY_TYPE: angular
 
-includes:
-  common: ./.common/taskfiles-website/Taskfile-common.yml
-  angular: ./.common/taskfiles-website/Taskfile-angular.yml
-  fix: ./.common/taskfiles-website/Taskfile-fix.yml
-  lint: ./.common/taskfiles-website/Taskfile-lint.yml
-  software: ./.common/taskfiles-website/Taskfile-{{OS}}.yml
