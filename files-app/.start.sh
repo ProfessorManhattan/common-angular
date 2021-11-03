@@ -12,7 +12,7 @@
 
 set -eo pipefail
 
-export REPO_TYPE="angular"
+export REPO_TYPE="none"
 export REPO_SUBTYPE="app"
 
 # @description Set the `BASH_PROFILE` variable to the location of the bash initialization script and
