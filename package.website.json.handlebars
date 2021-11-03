@@ -1,23 +1,9 @@
 {
-  "private": "{{ npm_private }}",
-  "files": [
-    "!**/*.json",
-    "!**/*.spec*",
-    "dist",
-    "CHANGELOG.md",
-    "CONTRIBUTING.md",
-    "LICENSE",
-    "README.md"
-  ],
-  "main": "dist/main.js",
-  "scripts": {},
-  "typings": "dist/main.d.ts",
   "dependencies": {
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1"
   },
   "devDependencies": {
-    "@megabytelabs/eslint-config": "^1.0.67",
     "@megabytelabs/jest-preset": "^1.0.0"
   },
   "jest": {
@@ -40,9 +26,6 @@
     "angular",
     "website"
   ],
-  "publishConfig": {
-    "access": "{{ npm_publish_config_access }}"
-  },
   "nodemonConfig": {
     "exec": "nest build && node --inspect-brk dist/main",
     "ext": "js,jsx,json,ts,yml",
