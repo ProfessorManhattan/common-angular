@@ -5,7 +5,7 @@
   "description": "Includes common files used across Angular repositories",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
-  "homepage": "https://gitlab.com/megabyte-labs/common/angular",
+  "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/megabyte-labs/common/angular.git"
