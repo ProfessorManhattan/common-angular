@@ -12,8 +12,8 @@
 
 set -eo pipefail
 
-export REPO_TYPE=""
-export REPO_SUBTYPE=""
+export REPO_TYPE="common"
+export REPO_SUBTYPE="angular"
 
 # @description Set the `BASH_PROFILE` variable to the location of the bash initialization script and
 # set the `SYSTEM` variable equal to a value indicating the type of system we are on.

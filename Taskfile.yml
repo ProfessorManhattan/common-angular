@@ -1,0 +1,6 @@
+---
+version: '3'
+
+vars:
+  REPOSITORY_SUBTYPE: angular
+  REPOSITORY_TYPE: common

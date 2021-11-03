@@ -1,26 +1,63 @@
 {
+  "private": "{{ npm_private }}",
+  "files": [
+    "!**/*.json",
+    "!**/*.spec*",
+    "dist",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "dist/main.js",
+  "scripts": {},
+  "typings": "dist/main.d.ts",
+  "dependencies": {
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^4.31.0",
-    "@typescript-eslint/parser": "^4.31.0",
-    "eslint-plugin-compat": "^3.13.0",
-    "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsdoc": "^36.1.0",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-regexp": "^1.1.0",
-    "eslint-plugin-rxjs": "^3.3.7",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sort-class-members": "^1.11.0",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-tsdoc": "^0.2.14",
-    "eslint-plugin-typescript-sort-keys": "^1.8.0",
-    "eslint-plugin-unicorn": "^35.0.0",
-    "eslint-plugin-unused-imports": "^1.1.4",
-    "prettier-plugin-organize-imports": "^2.3.2",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-prettier": "^1.2.0",
-    "typescript": "4.4.3"
+    "@megabytelabs/eslint-config": "^1.0.67",
+    "@megabytelabs/jest-preset": "^1.0.0"
+  },
+  "jest": {
+    "preset": "@megabytelabs/jest-preset",
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "filename": "index.html",
+          "logoImgPath": "./.common/assets/logo-icon-square-200x200.png",
+          "openReport": true,
+          "pageTitle": "Code Coverage Report",
+          "publicPath": "./coverage"
+        }
+      ]
+    ]
+  },
+  "keywords": [
+    "angular",
+    "chrome",
+    "extension",
+    "firefox",
+    "electron",
+    "android",
+    "ios",
+    "rxjs"
+  ],
+  "publishConfig": {
+    "access": "{{ npm_publish_config_access }}"
+  },
+  "nodemonConfig": {
+    "exec": "nest build && node --inspect-brk dist/main",
+    "ext": "js,jsx,json,ts,yml",
+    "ignore": [
+      "src/**/*.spec.ts"
+    ],
+    "watch": [
+      ".env",
+      "src"
+    ]
   }
 }
