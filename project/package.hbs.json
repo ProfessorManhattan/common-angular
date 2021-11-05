@@ -1,8 +1,4 @@
 {
-  "dependencies": {
-    "class-transformer": "^0.4.0",
-    "class-validator": "^0.13.1"
-  },
   "devDependencies": {
     "@megabytelabs/jest-preset": "^1.0.0"
   },
@@ -14,7 +10,7 @@
         "jest-html-reporters",
         {
           "filename": "index.html",
-          "logoImgPath": "./.common/assets/logo-icon-square-200x200.png",
+          "logoImgPath": "./.config/assets/logo-icon.png",
           "openReport": true,
           "pageTitle": "Code Coverage Report",
           "publicPath": "./coverage"
@@ -30,17 +26,7 @@
     "electron",
     "android",
     "ios",
+    "pwa",
     "rxjs"
   ],
-  "nodemonConfig": {
-    "exec": "nest build && node --inspect-brk dist/main",
-    "ext": "js,jsx,json,ts,yml",
-    "ignore": [
-      "src/**/*.spec.ts"
-    ],
-    "watch": [
-      ".env",
-      "src"
-    ]
-  }
 }
