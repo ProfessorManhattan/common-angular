@@ -11,6 +11,7 @@ include:
   - local: .gitlab/ci/lint/prettier.gitlab-ci.yml
   - local: .gitlab/ci/lint/shellcheck.gitlab-ci.yml
   - local: .gitlab/ci/lint/yamllint.gitlab-ci.yml
+  - local: .gitlab/ci/lsif/typescript.gitlab-ci.yml
   - local: .gitlab/ci/publish/web/firebase.gitlab-ci.yml
   - local: .gitlab/ci/test/jest.gitlab-ci.yml
   - local: .gitlab/ci/test/jest-e2e.gitlab-ci.yml
