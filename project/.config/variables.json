@@ -9,5 +9,6 @@
         "WEEKLY_TEST": true
       }
     }
-  ]
+  ],
+  "group": "angular"
 }
