@@ -16,11 +16,13 @@ include:
   - local: .gitlab/ci/lint/gitlab-ci-lint.gitlab-ci.yml
   - local: .gitlab/ci/lint/prettier.gitlab-ci.yml
   - local: .gitlab/ci/lint/shellcheck.gitlab-ci.yml
+  - local: .gitlab/ci/lint/stylelint.gitlab-ci.yml
   - local: .gitlab/ci/lint/yamllint.gitlab-ci.yml
-  - local: .gitlab/ci/publish/artifacts.gitlab-ci.yml
-  - local: .gitlab/ci/publish/docs.gitlab-ci.yml
-  - local: .gitlab/ci/publish/firebase.gitlab-ci.yml
-  - local: .gitlab/ci/publish/npmjs.gitlab-ci.yml
+  - local: .gitlab/ci/lsif/typescript.gitlab-ci.yml
+  - local: .gitlab/ci/publish/angular/artifacts.gitlab-ci.yml
+  - local: .gitlab/ci/publish/docs/typedoc.gitlab-ci.yml
+  - local: .gitlab/ci/publish/npm/npmjs.gitlab-ci.yml
+  - local: .gitlab/ci/publish/web/firebase.gitlab-ci.yml
   - local: .gitlab/ci/test/jest.gitlab-ci.yml
   - local: .gitlab/ci/test/jest-e2e.gitlab-ci.yml
   - local: .gitlab/ci/update/project.gitlab-ci.yml
