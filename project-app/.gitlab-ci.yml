@@ -17,7 +17,7 @@ include:
   - local: .gitlab/ci/lint/prettier.gitlab-ci.yml
   - local: .gitlab/ci/lint/shellcheck.gitlab-ci.yml
   - local: .gitlab/ci/lint/yamllint.gitlab-ci.yml
-  - local: .gitlab/ci/publish/apps.gitlab-ci.yml
+  - local: .gitlab/ci/publish/artifacts.gitlab-ci.yml
   - local: .gitlab/ci/publish/docs.gitlab-ci.yml
   - local: .gitlab/ci/publish/firebase.gitlab-ci.yml
   - local: .gitlab/ci/publish/npmjs.gitlab-ci.yml
