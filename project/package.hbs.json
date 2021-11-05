@@ -2,6 +2,9 @@
   "devDependencies": {
     "@megabytelabs/jest-preset": "^1.0.0"
   },
+  "files": ["dist", "CHANGELOG.md", "LICENSE", "README.md"],
+  "main": "dist/main.js",
+  "typings": "dist/main.d.ts",
   "jest": {
     "preset": "@megabytelabs/jest-preset",
     "reporters": [
