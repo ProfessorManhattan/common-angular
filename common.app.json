@@ -4,14 +4,7 @@
     "header_title_pre": "<i></i>",
     "link": "https://megabyte.space/docs/angular/app"
   },
-  "gitlab_pipelines": [
-    {
-      "active": true,
-      "cron": "0 12 * * 1",
-      "description": "Weekly test",
-      "ref": "master"
-    }
-  ],
+  
   "repository": {
     "prefix": {
       "github": "app-"
