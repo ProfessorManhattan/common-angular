@@ -1,18 +1,18 @@
 {
   "private": false,
-  "name": "@mblabs/common-ansible",
+  "name": "@mblabs/common-angular",
   "version": "0.0.1",
-  "description": "Shared Ansible files that propagate downstream as well as boilerplate code for new projects",
+  "description": "Common Angular files and awesome boilerplate code that propagates",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProfessorManhattan/common-ansible.git"
+    "url": "git+https://github.com/ProfessorManhattan/common-angular.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/common/ansible/-/issues"
+    "url": "https://gitlab.com/megabyte-labs/common/angular/-/issues"
   },
   "type": "module",
   "scripts": {
@@ -40,16 +40,16 @@
     "angular",
     "awesome",
     "boilerplate",
+    "browser-extensions",
+    "cordova",
+    "cross-platform",
+    "firebase",
     "megabytelabs",
+    "menubar",
     "npm",
     "package",
-    "webapp",
-    "cordova",
-    "browser-extensions",
-    "menubar",
-    "cross-platform",
     "professormanhattan",
-    "firebase"
+    "webapp"
   ],
   "engines": {
     "node": ">=14.18.0"

@@ -1,0 +1,31 @@
+---
+stages:
+  - update
+  - lint
+  - test
+  - build
+  - publish
+
+include:
+  - local: .gitlab/ci/build/android.gitlab-ci.yml
+  - local: .gitlab/ci/build/electron.gitlab-ci.yml
+  - local: .gitlab/ci/build/extensions.gitlab-ci.yml
+  - local: .gitlab/ci/build/ios.gitlab-ci.yml
+  - local: .gitlab/ci/build/menubar.gitlab-ci.yml
+  - local: .gitlab/ci/lint/eslint.gitlab-ci.yml
+  - local: .gitlab/ci/lint/prettier.gitlab-ci.yml
+  - local: .gitlab/ci/lint/shellcheck.gitlab-ci.yml
+  - local: .gitlab/ci/lint/stylelint.gitlab-ci.yml
+  - local: .gitlab/ci/lint/yamllint.gitlab-ci.yml
+  - local: .gitlab/ci/lsif/typescript.gitlab-ci.yml
+  - local: .gitlab/ci/publish/angular/artifacts.gitlab-ci.yml
+  - local: .gitlab/ci/publish/docs/typedoc.gitlab-ci.yml
+  - local: .gitlab/ci/publish/npm/npmjs.gitlab-ci.yml
+  - local: .gitlab/ci/publish/web/firebase.gitlab-ci.yml
+  - local: .gitlab/ci/test/jest.gitlab-ci.yml
+  - local: .gitlab/ci/test/jest-e2e.gitlab-ci.yml
+  - local: .gitlab/ci/update/project.gitlab-ci.yml
+  - template: Dependency-Scanning.gitlab-ci.yml
+  - template: Security/License-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml

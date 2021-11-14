@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "common-angular"
+version = "0.0.1"
+description = "Common Angular files and awesome boilerplate code that propagates"
+authors = ["Brian Zalewski <brian@megabyte.space>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://megabyte.space"
+documentation = "https://megabyte.space/docs/common/angular"
+keywords = ["angular", "awesome", "boilerplate", "megabytelabs", "npm", "package", "webapp", "cordova", "browser-extensions", "menubar", "cross-platform", "professormanhattan", "firebase"]
+include = ["CHANGELOG.md", "LICENSE"]
+
+[tool.poetry.dependencies]
+python = ">=3.7.0,<4.0.0"
+
+[tool.poetry.dev-dependencies]
+blocklint = "^0.2.3"
+pre-commit-hooks = "^4.0.1"
+proselint = "^0.12.0"
+yamllint = "^1.26.3"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://gitlab.com/megabyte-labs/common/angular/-/issues"
+"GitHub" = "https://github.com/ProfessorManhattan/common-angular"
+"GitLab" = "https://gitlab.com/megabyte-labs/common/angular"
+"Open Collective" = "https://opencollective.com/megabytelabs"
+"Patreon" = "https://www.patreon.com/ProfessorManhattan"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
