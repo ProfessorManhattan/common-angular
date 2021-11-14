@@ -59,8 +59,8 @@ vars:
   NPM_PROGRAM: npm
   NPX_HANDLE: ''
   NPX_PACKAGE: npx
-  REPOSITORY_SUBTYPE: angular
-  REPOSITORY_TYPE: common
+  REPOSITORY_SUBTYPE: ansible
+  REPOSITORY_TYPE: documentation
   TIMEZONE: America/New_York
 
 tasks:
@@ -77,4 +77,4 @@ tasks:
       **Example usage:**
       `task start`
     cmds:
-      - task: upstream:common
+      - task: upstream:docs
