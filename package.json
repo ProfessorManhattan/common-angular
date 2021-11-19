@@ -1,5 +1,5 @@
 {
-  "private": false,
+  "private": "false",
   "name": "@mblabs/common-angular",
   "version": "0.0.1",
   "description": "Common Angular files and awesome boilerplate code that propagates",
