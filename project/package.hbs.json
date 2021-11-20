@@ -11,7 +11,7 @@
         "jest-html-reporters",
         {
           "filename": "index.html",
-          "logoImgPath": "./.config/assets/logo-icon.png",
+          "logoImgPath": "./.config/assets/logo-jest-report.png",
           "openReport": true,
           "pageTitle": "Code Coverage Report",
           "publicPath": "./coverage"
