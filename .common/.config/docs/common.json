@@ -1,4 +1,5 @@
 {
+  "build_coverage_regex": "Lines\\s*:\\s*(\\d+.?\\d*)%",
   "docs": {
     "link": "https://megabyte.space/docs/common/angular"
   }
