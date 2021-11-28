@@ -28,7 +28,7 @@
   "description": "{{description}}",
   "devDependencies": {
     "@commitlint/config-conventional": "^13.1.0",
-    "@mblabs/eslint-config": "^1.0.97",
+    "@mblabs/eslint-config": "^1.0.101",
     "@mblabs/jest-preset": "^1.0.0",
     "@mblabs/prettier-config": "^14.14.14",
     "@mblabs/release-config": "^1.0.0",
