@@ -183,6 +183,7 @@
     "help": "{{npm_scripts_help}}",
     "ng": "ng",
     "prepare": "{{npm_scripts_prepare}}",
+    "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "ng serve",
     "test": "ng test",
     "test:cov": "ng test --coverage",
