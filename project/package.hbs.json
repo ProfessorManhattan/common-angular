@@ -2,6 +2,11 @@
   "devDependencies": {
     "@mblabs/jest-preset": "^1.0.0"
   },
+  "eslintConfig": {
+    "rules": {
+      "woke/all": "off"
+    }
+  },
   "files": ["dist", "CHANGELOG.md", "LICENSE", "README.md"],
   "jest": {
     "preset": "@mblabs/jest-preset",

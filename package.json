@@ -83,7 +83,11 @@
     "title": "Angular Common Files and Boilerplate Code"
   },
   "eslintConfig": {
-    "extends": "@mblabs/eslint-config"
+    "extends": "@mblabs/eslint-config",
+    "rules": {
+      "import/no-unresolved": "off",
+      "woke/all": "off"
+    }
   },
   "funding": [
     {

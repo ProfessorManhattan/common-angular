@@ -29,5 +29,6 @@
     "strictPropertyInitialization": true,
     "target": "es5",
     "typeRoots": ["node_modules/@types", "src/types"]
-  }
+  },
+  "include": ["**/.boilerplate/**/*.ts"]
 }
