@@ -1,12 +1,4 @@
 {
-  "scripts": {
-    "build": "ng build",
-    "ng": "ng",
-    "start": "ng serve",
-    "test": "ng test",
-    "test:cov": "ng test --coverage",
-    "watch": "ng build --watch --configuration development"
-  },
   "dependencies": {
     "@angular/animations": "~13.0.0",
     "@angular/common": "~13.0.0",
@@ -56,5 +48,13 @@
   },
   "keywords": ["angular", "chrome", "extension", "firefox", "electron", "android", "ios", "pwa", "rxjs"],
   "main": "dist/main.js",
+  "scripts": {
+    "build": "ng build",
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test",
+    "test:cov": "ng test --coverage",
+    "watch": "ng build --watch --configuration development"
+  },
   "typings": "dist/main.d.ts"
 }

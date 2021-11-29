@@ -21,21 +21,40 @@
     }
   },
   "dependencies": {
+    "@angular/animations": "~13.0.0",
+    "@angular/common": "~13.0.0",
+    "@angular/compiler": "~13.0.0",
+    "@angular/core": "~13.0.0",
+    "@angular/forms": "~13.0.0",
+    "@angular/platform-browser": "~13.0.0",
+    "@angular/platform-browser-dynamic": "~13.0.0",
+    "@angular/router": "~13.0.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
-    "tslib": "^2.3.1"
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
   },
   "description": "{{description}}",
   "devDependencies": {
+    "@angular-builders/jest": "^13.0.0",
+    "@angular-devkit/build-angular": "~13.0.3",
+    "@angular/cli": "~13.0.3",
+    "@angular/compiler-cli": "~13.0.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@mblabs/eslint-config": "^1.0.102",
     "@mblabs/jest-preset": "^1.0.0",
     "@mblabs/prettier-config": "^14.14.14",
     "@mblabs/release-config": "^1.0.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "handlebars-helpers": "^0.10.0",
-    "semantic-release": "^18.0.0"
+    "jest": "^27.3.1",
+    "semantic-release": "^18.0.0",
+    "ts-jest": "^27.0.7",
+    "typescript": "~4.4.3"
   },
   "engines": {
     "node": ">=14.18.0"
@@ -160,9 +179,14 @@
     "url": "git+{{#if repository.github}}{{repository.github}}{{else}}https://github.com/{{profile.github}}/{{repository.prefix.github}}{{slug}}{{/if}}.git"
   },
   "scripts": {
+    "build": "ng build",
     "help": "{{npm_scripts_help}}",
+    "ng": "ng",
     "prepare": "{{npm_scripts_prepare}}",
-    "start": "{{npm_scripts_start}}"
+    "start": "ng serve",
+    "test": "ng test",
+    "test:cov": "ng test --coverage",
+    "watch": "ng build --watch --configuration development"
   },
   "type": "{{npm_type}}",
   "typings": "dist/main.d.ts",
