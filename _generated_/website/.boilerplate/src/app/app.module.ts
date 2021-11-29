@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 
+/**
+ * Module for base app
+ */
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [AppComponent],
