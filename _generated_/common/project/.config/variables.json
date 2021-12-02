@@ -1,0 +1,14 @@
+{
+  "gitlab_pipelines": [
+    {
+      "active": true,
+      "cron": "0 12 * * 1",
+      "description": "Weekly test",
+      "ref": "master",
+      "variable": {
+        "WEEKLY_TEST": true
+      }
+    }
+  ],
+  "group": "angular"
+}
