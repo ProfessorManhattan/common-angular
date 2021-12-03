@@ -29,9 +29,9 @@
       "woke/all": "off"
     }
   },
-  "files": ["dist", "CHANGELOG.md", "LICENSE", "README.md"],
+  "files": ["dist/", "CHANGELOG.md", "LICENSE", "README.md"],
   "jest": {
-    "preset": "@mblabs/jest-preset",
+    "preset": "@washingtondc/jest",
     "reporters": [
       "default",
       [
