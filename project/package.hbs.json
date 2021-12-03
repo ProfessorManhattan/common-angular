@@ -17,7 +17,7 @@
     "@angular-devkit/build-angular": "~13.0.3",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
-    "@mblabs/jest-preset": "^1.0.0",
+    "@washingtondc/jest": "^1.0.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^12.11.1",
     "jest": "^27.3.1",
