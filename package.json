@@ -62,6 +62,9 @@
     "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
     "emoji_end": "🔥❤️🤖",
     "emoji_start": "",
+    "github_id": "R_kgDOGet1DA",
+    "gitlab_group_id": "11097242",
+    "gitlab_project_id": "25919187",
     "group": "common",
     "name": "Angular Common",
     "overview": "This repository is home to common Angular files as well as boilerplate code for new projects. This repository hosts files that are shared to all our downstream Angular projects (and perhaps yours as well, if you like). There is also boilerplate code that is added to a project if there is no file structure yet. The boilerplate code is amazing. Create browser extensions, Cordova apps, menubars, Electron apps, and more with a single codebase.",
@@ -74,10 +77,7 @@
     },
     "slug": "common-angular",
     "subgroup": "angular",
-    "title": "Angular Common Files and Boilerplate Code",
-    "github_id": "R_kgDOGet1DA",
-    "gitlab_project_id": "25919187",
-    "gitlab_group_id": "11097242"
+    "title": "Angular Common Files and Boilerplate Code"
   },
   "commitlint": {
     "extends": [
