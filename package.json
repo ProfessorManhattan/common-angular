@@ -1,8 +1,8 @@
 {
-  "private": true,
-  "name": "@mblabs/common-angular",
+  "private": false,
+  "name": "@installdoc/common-angular",
   "version": "0.0.1",
-  "description": "Common Angular files and awesome boilerplate code that propagates",
+  "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "homepage": "https://megabyte.space",
@@ -23,7 +23,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-emoji"
+      "path": "node_modules/cz-emoji-conventional"
     }
   },
   "dependencies": {},
@@ -49,6 +49,7 @@
     "npm",
     "package",
     "professormanhattan",
+    "washingtondc",
     "webapp"
   ],
   "engines": {
@@ -75,8 +76,14 @@
     "subgroup": "angular",
     "title": "Angular Common Files and Boilerplate Code"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "helpUrl": "https://megabyte.space/docs/contributing/commits"
+  },
   "eslintConfig": {
-    "extends": "@mblabs/eslint-config",
+    "extends": "eslint-config-strict-mode",
     "rules": {
       "import/no-extraneous-dependencies": "off",
       "import/no-unresolved": "off",
@@ -115,7 +122,6 @@
       "task fix:json --"
     ],
     "**/*.sh": [
-      "task fix:shell --",
       "task lint:shell --"
     ],
     "**/*.toml": [
@@ -134,12 +140,12 @@
       "task image:compress --"
     ]
   },
-  "prettier": "@mblabs/prettier-config",
+  "prettier": "@washingtondc/prettier",
   "release": {
     "branches": [
       "master",
       "next"
     ],
-    "extends": "@mblabs/release-config"
+    "extends": "@washingtondc/release"
   }
 }

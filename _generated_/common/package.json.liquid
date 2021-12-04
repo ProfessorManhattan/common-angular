@@ -15,9 +15,15 @@
     "email": "{{email.help}}",
     "url": "{{#if repository.gitlab}}{{repository.gitlab}}{{else}}{{repository.gitlabBaseUrl}}/{{group}}/{{subgroup}}/{{slug}}{{/if}}{{repository.location.issues.gitlab}}"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "helpUrl": "https://megabyte.space/docs/contributing/commits"
+  },
   "config": {
     "commitizen": {
-      "path": "cz-emoji"
+      "path": "node_modules/cz-emoji-conventional"
     }
   },
   "dependencies": {
@@ -39,15 +45,15 @@
     "@angular-devkit/build-angular": "~13.0.3",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
-    "@mblabs/jest-preset": "^1.0.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^12.11.1",
-    "@typescript-eslint/eslint-plugin": "^5.2.0",
-    "commitlint-config-gitmoji": "^2.2.5",
-    "glob": "^7.2.0",
-    "handlebars-helpers": "^0.10.0",
+    "@washingtondc/development": "^1.0.2",
+    "@washingtondc/jest": "^1.0.0",
+    "@washingtondc/prettier": "^1.0.0",
+    "@washingtondc/release": "^0.0.2",
+    "eslint-config-strict-mode": "^1.0.0",
     "jest": "^27.3.1",
-    "semantic-release": "^18.0.0",
+    "sleekfast": "^0.0.1",
     "ts-jest": "^27.0.7",
     "typescript": "~4.4.3"
   },
@@ -55,13 +61,13 @@
     "node": ">=14.18.0"
   },
   "eslintConfig": {
-    "extends": "@mblabs/eslint-config",
+    "extends": "eslint-config-strict-mode",
     "rules": {
       "woke/all": "off"
     }
   },
   "files": [
-    "dist",
+    "dist/",
     "CHANGELOG.md",
     "LICENSE",
     "README.md"
@@ -78,7 +84,7 @@
   ],
   "homepage": "{{link.home}}",
   "jest": {
-    "preset": "@mblabs/jest-preset",
+    "preset": "@washingtondc/jest",
     "reporters": [
       "default",
       [
@@ -105,7 +111,8 @@
     "megabytelabs",
     "professormanhattan",
     "pwa",
-    "rxjs"
+    "rxjs",
+    "washingtondc"
   ],
   "license": "{{license}}",
   "lint-staged": {
@@ -130,7 +137,6 @@
       "task fix:json --"
     ],
     "**/*.sh": [
-      "task fix:shell --",
       "task lint:shell --"
     ],
     "**/*.toml": [
@@ -151,14 +157,9 @@
   },
   "main": "dist/main.js",
   "name": "{{#if customPackageName}}{{customPackageName}}{{else}}@{{profile.npmjs_organization}}/{{repository.prefix.github}}{{slug}}{{/if}}",
-  "optionalDependencies": {
-    "chalk": "^4.1.2",
-    "inquirer": "^8.2.0",
-    "signale": "^1.4.0",
-    "string-break": "^1.2.0"
-  },
-  "prettier": "@mblabs/prettier-config",
-  "private": true,
+  "optionalDependencies": {},
+  "prettier": "@washingtondc/prettier",
+  "private": false,
   "publishConfig": {
     "access": "{{npm_publish_config_access}}"
   },
@@ -167,7 +168,7 @@
       "master",
       "next"
     ],
-    "extends": "@mblabs/release-config"
+    "extends": "@washingtondc/release"
   },
   "repository": {
     "type": "git",
