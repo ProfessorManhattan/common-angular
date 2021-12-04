@@ -74,7 +74,10 @@
     },
     "slug": "common-angular",
     "subgroup": "angular",
-    "title": "Angular Common Files and Boilerplate Code"
+    "title": "Angular Common Files and Boilerplate Code",
+    "github_id": "R_kgDOGet1DA",
+    "gitlab_project_id": "25919187",
+    "gitlab_group_id": "11097242"
   },
   "commitlint": {
     "extends": [
