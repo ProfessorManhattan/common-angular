@@ -70,6 +70,8 @@
   },
   "blueprint": {
     "description": "Common Angular files and awesome boilerplate code that propagates",
+    "emoji_end": "🔥❤️🤖",
+    "emoji_start": "",
     "group": "common",
     "name": "Angular Common",
     "overview": "This repository is home to common Angular files as well as boilerplate code for new projects. This repository hosts files that are shared to all our downstream Angular projects (and perhaps yours as well, if you like). There is also boilerplate code that is added to a project if there is no file structure yet. The boilerplate code is amazing. Create browser extensions, Cordova apps, menubars, Electron apps, and more with a single codebase.",
