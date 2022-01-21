@@ -8,7 +8,7 @@ readme = "README.md"
 homepage = "https://megabyte.space"
 documentation = "https://megabyte.space/docs/common/angular"
 keywords = ["angular", "awesome", "boilerplate", "browser-extensions", "cordova", "cross-platform", "firebase", "mblabs", "megabytelabs", "menubar", "npm", "package", "professormanhattan", "washingtondc", "webapp"]
-include = ["CHANGELOG.md", "LICENSE"]
+include = ["docs/CHANGELOG.md", "LICENSE"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Development Status :: 5 - Production/Stable",
