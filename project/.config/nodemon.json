@@ -1,5 +1,5 @@
 {
-  "exec": "task build",
+  "exec": "task project:livereload",
   "ext": "js,jsx,ts,tsx,json,ts,yml",
   "watch": [".env", "src"]
 }
