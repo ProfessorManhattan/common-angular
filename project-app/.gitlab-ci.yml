@@ -8,24 +8,25 @@ stages:
   - publish
 
 include:
-  - local: .gitlab/ci/build/android.gitlab-ci.yml
-  - local: .gitlab/ci/build/electron.gitlab-ci.yml
-  - local: .gitlab/ci/build/extensions.gitlab-ci.yml
-  - local: .gitlab/ci/build/ios.gitlab-ci.yml
-  - local: .gitlab/ci/build/menubar.gitlab-ci.yml
-  - local: .gitlab/ci/lint/eslint.gitlab-ci.yml
-  - local: .gitlab/ci/lint/prettier.gitlab-ci.yml
-  - local: .gitlab/ci/lint/shellcheck.gitlab-ci.yml
-  - local: .gitlab/ci/lint/stylelint.gitlab-ci.yml
-  - local: .gitlab/ci/lint/yamllint.gitlab-ci.yml
-  - local: .gitlab/ci/lsif/typescript.gitlab-ci.yml
-  - local: .gitlab/ci/publish/angular/artifacts.gitlab-ci.yml
-  - local: .gitlab/ci/publish/docs/typedoc.gitlab-ci.yml
-  - local: .gitlab/ci/publish/npm/npmjs.gitlab-ci.yml
-  - local: .gitlab/ci/publish/web/firebase.gitlab-ci.yml
-  - local: .gitlab/ci/test/jest.gitlab-ci.yml
-  - local: .gitlab/ci/test/jest-e2e.gitlab-ci.yml
-  - local: .gitlab/ci/update/project.gitlab-ci.yml
+  - local: .gitlab/ci/custom.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/android.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/electron.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/extensions.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/ios.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/menubar.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/lint/eslint.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/lint/prettier.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/lint/shellcheck.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/lint/stylelint.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/lint/yamllint.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/lsif/typescript.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/publish/angular/artifacts.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/publish/docs/typedoc.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/publish/npm/npmjs.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/publish/web/firebase.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/test/jest.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/test/jest-e2e.gitlab-ci.yml
+  - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/update/project.gitlab-ci.yml
   - template: Dependency-Scanning.gitlab-ci.yml
   - template: Security/License-Scanning.gitlab-ci.yml
   - template: Security/SAST.gitlab-ci.yml
