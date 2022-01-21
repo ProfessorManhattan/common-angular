@@ -8,7 +8,6 @@ stages:
   - publish
 
 include:
-  - local: .gitlab/ci/custom.yml
   - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/android.gitlab-ci.yml
   - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/electron.gitlab-ci.yml
   - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/extensions.gitlab-ci.yml
