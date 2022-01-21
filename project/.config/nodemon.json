@@ -1,0 +1,5 @@
+{
+  "exec": "task build",
+  "ext": "js,jsx,ts,tsx,json,ts,yml",
+  "watch": [".env", "src"]
+}
