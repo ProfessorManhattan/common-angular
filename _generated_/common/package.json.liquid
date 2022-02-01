@@ -55,14 +55,17 @@
     "@angular-devkit/build-angular": "~13.0.3",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^12.11.1",
-    "@washingtondc/development": "^1.0.2",
-    "@washingtondc/prettier": "^1.0.0",
-    "eslint-config-strict-mode": "^1.0.28",
+    "@washingtondc/development": "latest",
+    "cz-emoji-conventional": "^1.0.1",
+    "eslint-config-strict-mode": "latest",
+    "handlebars-helpers": "^0.10.0",
     "jest": "^27.3.1",
     "jest-preset-ts": "^1.0.0",
-    "semantic-release-config": "^0.0.12",
+    "prettier-config-sexy-mode": "latest",
+    "semantic-release-config": "latest",
     "ts-jest": "^27.0.7",
     "typescript": "~4.4.3"
   },
@@ -167,14 +170,16 @@
   "name": "{{#if customPackageName}}{{customPackageName}}{{else}}@{{profile.npmjs_organization}}/{{repository.prefix.github}}{{slug}}{{/if}}",
   "ntl": {
     "descriptions": {
+      "build": "Builds the project, if needed",
       "help": "Display the Bodega Taskfile.yml interactive help menu",
       "prepare": "Hook, triggered by running npm install, that runs logic such as installing pre-commit hooks",
       "repair": "Fixes basic issues in projects that are having trouble running basic commands like 'task start'",
-      "start": "Entrypoint for new developers that installs requirements and then runs 'task start'"
+      "start": "Entrypoint for new developers that installs requirements and then runs 'task start'",
+      "test": "Runs the appropriate test logic"
     }
   },
   "optionalDependencies": {},
-  "prettier": "@washingtondc/prettier",
+  "prettier": "prettier-config-sexy-mode",
   "private": false,
   "publishConfig": {
     "access": "{{npm_publish_config_access}}"
@@ -201,9 +206,9 @@
   },
   "scripts": {
     "build": "ng build",
-    "help": "{{npm_scripts_help}}",
+    "help": "{{scriptsHelp}}",
     "ng": "ng",
-    "prepare": "{{npm_scripts_prepare}}",
+    "prepare": "{{scriptsPrepare}}",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "ng serve",
     "test": "ng test",
