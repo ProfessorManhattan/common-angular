@@ -17,10 +17,10 @@
     "@angular-devkit/build-angular": "~13.0.3",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
-    "@washingtondc/jest": "^1.0.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^12.11.1",
     "jest": "^27.3.1",
+    "jest-preset-ts": "^1.0.0",
     "ts-jest": "^27.0.7",
     "typescript": "~4.4.3"
   },
@@ -31,7 +31,7 @@
   },
   "files": ["dist/", "CHANGELOG.md", "LICENSE", "README.md"],
   "jest": {
-    "preset": "@washingtondc/jest",
+    "preset": "jest-preset-ts",
     "reporters": [
       "default",
       [
