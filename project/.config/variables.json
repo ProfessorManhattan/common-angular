@@ -19,5 +19,7 @@
       }
     }
   ],
-  "group": "angular"
+  "group": "angular",
+  "scriptsBuild": "ng build",
+  "scriptsTest": "ng test"
 }
