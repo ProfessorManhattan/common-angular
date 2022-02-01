@@ -5,7 +5,7 @@ specifiers:
   '@washingtondc/prettier': ^1.0.0
   '@washingtondc/release': ^0.0.2
   eslint-config-strict-mode: ^1.0.30
-  semantic-release-config: ^0.0.15
+  semantic-release-config: ^0.0.16
   sleekfast: ^0.0.1
 
 devDependencies:
@@ -13,7 +13,7 @@ devDependencies:
   '@washingtondc/prettier': 1.0.0
   '@washingtondc/release': 0.0.2
   eslint-config-strict-mode: 1.0.30
-  semantic-release-config: 0.0.15
+  semantic-release-config: 0.0.16
   sleekfast: 0.0.1
 
 packages:
@@ -3171,7 +3171,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001304
-      electron-to-chromium: 1.4.58
+      electron-to-chromium: 1.4.59
       escalade: 3.1.1
       node-releases: 2.0.1
       picocolors: 1.0.0
@@ -4766,8 +4766,8 @@ packages:
       sigmund: 1.0.1
     dev: true
 
-  /electron-to-chromium/1.4.58:
-    resolution: {integrity: sha512-7LXwnKyqcEaMFVXOer+2JPfFs1D+ej7yRRrfZoIH1YlLQZ81OvBNwSCBBLtExVkoMQQgOWwO0FbZVge6U/8rhQ==}
+  /electron-to-chromium/1.4.59:
+    resolution: {integrity: sha512-AOJ3cAE0TWxz4fQ9zkND5hWrQg16nsZKVz9INOot1oV//u4wWu5xrj9CQMmPTYskkZRunSRc9sAnr4EkexXokg==}
     dev: true
 
   /elegant-spinner/1.0.1:
@@ -11416,8 +11416,8 @@ packages:
     engines: {node: '>=0.12.0'}
     dev: true
 
-  /semantic-release-config/0.0.15:
-    resolution: {integrity: sha512-MZFS7Tg7dNEm9kzpKY2Ofas8MCe8VCA1rp7cowza+r2SfOmPvM0Xd6NqfHEKQENWLuUt8xynvKBZ6XtNwxn/tA==}
+  /semantic-release-config/0.0.16:
+    resolution: {integrity: sha512-bcKJYZRzN7Xlm/Ic6B6PENndTXT/sdXuWsGlKywb1wiF/zoi1Ki+yGCPt1z7896R1rJK6HlxF8RkH3/KypADiA==}
     engines: {node: '>=14.18.0'}
     dependencies:
       '@auto-it/all-contributors': 10.32.6
