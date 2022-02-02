@@ -75,9 +75,6 @@
   "eslintConfig": {
     "extends": "eslint-config-strict-mode",
     "rules": {
-      "import/no-extraneous-dependencies": "warn",
-      "max-len": "warn",
-      "max-lines": "warn",
       "woke/all": "off"
     }
   },
@@ -206,9 +203,9 @@
   },
   "scripts": {
     "build": "ng build",
-    "help": "{{scriptsHelp}}",
+    "help": "{{{scriptsHelp}}}",
     "ng": "ng",
-    "prepare": "{{scriptsPrepare}}",
+    "prepare": "{{{scriptsPrepare}}}",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "ng serve",
     "test": "ng test",
