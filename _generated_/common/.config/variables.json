@@ -82,6 +82,7 @@
       }
     }
   ],
+  "gomodProxy": true,
   "group": "angular",
   "homebrew": {
     "folder": "Formula",
