@@ -1,14 +1,4 @@
 ---
-variables:
-  PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
-
-cache:
-  key: "${CI_JOB_NAME}"
-  paths:
-    - .cache/pip
-    - .pnpm-store
-    - .venv
-
 stages:
   - update
   - lint
@@ -16,6 +6,16 @@ stages:
   - lsif
   - build
   - publish
+
+variables:
+  PIP_CACHE_DIR: '${CI_PROJECT_DIR}/.cache/pip'
+
+cache:
+  key: '${CI_JOB_NAME}'
+  paths:
+    - .cache/pip
+    - .pnpm-store
+    - .venv
 
 include:
   - remote: https://gitlab.com/megabyte-labs/gitlab-ci/-/raw/master/build/android.gitlab-ci.yml
