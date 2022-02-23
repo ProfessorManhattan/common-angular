@@ -256,9 +256,9 @@
   },
   "scripts": {
     "build": "ng build",
-    "help": "{{{scriptsHelp}}}",
+    "help": "{{{replace scriptsHelp '\"' '\\\"'}}}",
     "ng": "ng",
-    "prepare": "{{{scriptsPrepare}}}",
+    "prepare": "{{{replace scriptsPrepare '\"' '\\\"'}}}",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "ng serve",
     "test": "ng test",
