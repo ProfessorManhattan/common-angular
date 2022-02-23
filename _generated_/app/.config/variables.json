@@ -268,6 +268,8 @@
   "scriptsBuild": "ng build",
   "scriptsHelp": "task --menu",
   "scriptsPrepare": "npm run start && (test -f Taskfile.yml && task common:husky) || true",
+  "scriptsReplaceThis": "\"",
+  "scriptsReplaceWith": "\\\"",
   "scriptsStart": "bash start.sh",
   "scriptsTest": "ng test",
   "sharp_instructions": [],
