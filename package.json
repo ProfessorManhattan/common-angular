@@ -46,7 +46,9 @@
       "path": "node_modules/git-cz-emoji"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "latest"
+  },
   "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
   "devDependencies": {
     "@commitlint/config-conventional": "^16.0.0",
