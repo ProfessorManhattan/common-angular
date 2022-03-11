@@ -262,7 +262,7 @@
     "ng": "ng",
     "preload": "task preload",
     "prepare": "npm run start && (test -f Taskfile.yml && task npm:prepare) || true",
-    "prepublishOnly": "task npm:bundle:create",
+    "prepublishOnly": "test -z SKIP_NPM_PREPUBLISHONLY && task npm:bundle:create",
     "release": "task publish:semantic-release",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "ng serve",
