@@ -2,3 +2,7 @@ husky
 jq
 commitlint
 git-cz
+git-cz
+commitlint
+jq
+husky
