@@ -14,3 +14,7 @@ git-cz
 jq
 husky
 commitlint
+husky
+commitlint
+git-cz
+jq
