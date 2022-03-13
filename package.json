@@ -1,5 +1,80 @@
 {
+  "private": false,
+  "name": "@installdoc/common-angular",
+  "version": "0.0.1",
+  "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
+  "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
+  "homepage": "https://megabyte.space",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfessorManhattan/common-angular.git"
+  },
+  "bugs": {
+    "email": "help@megabyte.space",
+    "url": "https://gitlab.com/megabyte-labs/common/angular/-/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "bash start.sh && task donothing",
+    "bump": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version --force && npm publish",
+    "commit": "bash start.sh && task commit",
+    "fix": "bash start.sh && task fix",
+    "help": "bash start.sh && task --menu",
+    "lint": "bash start.sh && task list",
+    "preload": "bash start.sh && task preload",
+    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
+    "publish": "task publish:semantic-release",
+    "prepublishOnly": "test -z SKIP_NPM_PREPUBLISHONLY && bash start.sh && task npm:bundle:create || true",
+    "release": "bash start.sh && task publish:semantic-release",
+    "repair": "bash <(curl -sS https://install.doctor/repair)",
+    "start": "test -z SKIP_NPM_START && bash start.sh || true",
+    "test": "bash start.sh && task donothing",
+    "unpack": "bash start.sh && task npm:bundle:unpack",
+    "update": "bash start.sh && task update"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/git-cz-emoji"
+    }
+  },
+  "dependencies": {
+    "tslib": "latest"
+  },
+  "optionalDependencies": {},
+  "devDependencies": {
+    "@commitlint/config-conventional": "latest",
+    "eslint-config-strict-mode": "latest",
+    "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
+    "prettier-config-sexy-mode": "latest",
+    "semantic-release-config": "latest",
+    "typescript": "latest"
+  },
+  "keywords": [
+    "angular",
+    "awesome",
+    "boilerplate",
+    "browser-extensions",
+    "cordova",
+    "cross-platform",
+    "firebase",
+    "mblabs",
+    "megabytelabs",
+    "menubar",
+    "npm",
+    "package",
+    "professormanhattan",
+    "washingtondc",
+    "webapp"
+  ],
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "publishConfig": {
+    "@megabyte:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
+    "access": "public"
+  },
   "blueprint": {
     "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
     "emoji_end": "🔥❤️🤖",
@@ -21,10 +96,6 @@
     "subgroup": "angular",
     "title": "Angular Common Files and Boilerplate Code"
   },
-  "bugs": {
-    "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/common/angular/-/issues"
-  },
   "changelog": {
     "displayTypes": [
       "feat",
@@ -36,29 +107,10 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/git-cz-emoji"
-    }
-  },
-  "dependencies": {
-    "tslib": "latest"
-  },
-  "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
-  "devDependencies": {
-    "eslint-config-strict-mode": "latest",
-    "git-cz-emoji": "latest",
-    "prettier-config-sexy-mode": "latest",
-    "semantic-release-config": "latest",
-    "typescript": "latest",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
-  },
-  "engines": {
-    "node": ">=14.18.0"
   },
   "eslintConfig": {
     "extends": "eslint-config-strict-mode",
@@ -80,29 +132,7 @@
       "url": "https://www.patreon.com/ProfessorManhattan"
     }
   ],
-  "homepage": "https://megabyte.space",
-  "keywords": [
-    "angular",
-    "awesome",
-    "boilerplate",
-    "browser-extensions",
-    "cordova",
-    "cross-platform",
-    "firebase",
-    "mblabs",
-    "megabytelabs",
-    "menubar",
-    "npm",
-    "package",
-    "professormanhattan",
-    "washingtondc",
-    "webapp"
-  ],
-  "license": "MIT",
   "lint-staged": {
-    "(.dockerignore|.editorconfig|.eslintignore|.gitattributes|.gitconfig|.gitignore|.gitmodules|.nodemonignore|.npmignore|.prettierignore)": [
-      "task fix:prettier --"
-    ],
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
       "task fix:prettier --"
     ],
@@ -122,19 +152,6 @@
       "task fix:js --",
       "task lint:js --"
     ],
-    "**/*.(css|html|less|md|mjml|php|scss|sh|xml)": [
-      "task fix:prettier --"
-    ],
-    "**/*.(jpg|png)": [
-      "task image:compress --"
-    ],
-    "**/*.(json|webapp|webmanifest)": [
-      "task fix:json --"
-    ],
-    "**/*.(js|jsx|ts|tsx)": [
-      "task fix:js --",
-      "task lint:js --"
-    ],
     "**/*.(yml|yaml)": [
       "task fix:yaml --",
       "task lint:yaml --"
@@ -142,9 +159,6 @@
     "**/*.go": [
       "task fix:go --",
       "task lint:go --"
-    ],
-    "**/*.json": [
-      "task fix:json --"
     ],
     "**/*.md": [
       "task fix:markdown --",
@@ -172,10 +186,6 @@
       "task fix:xml --",
       "task lint:xml --"
     ],
-    "**/*.yml": [
-      "task fix:yaml --",
-      "task lint:yaml --"
-    ],
     "Dockerfile": [
       "task fix:prettier --",
       "task lint:docker --"
@@ -189,7 +199,6 @@
       "task image:compress --"
     ]
   },
-  "name": "@installdoc/common-angular",
   "ntl": {
     "descriptions": {
       "build": "Builds the project using the build command specified under scripts in package.json",
@@ -209,7 +218,6 @@
       "update": "Update and refresh the repository with upstream changes and templated parts"
     }
   },
-  "optionalDependencies": {},
   "pnpm": {
     "allowedVersions": {
       "@typescript-eslint/eslint-plugin": "5",
@@ -229,11 +237,6 @@
     }
   },
   "prettier": "prettier-config-sexy-mode",
-  "private": false,
-  "publishConfig": {
-    "@megabyte:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
-    "access": "public"
-  },
   "release": {
     "branches": [
       "main",
@@ -249,29 +252,5 @@
       }
     ],
     "extends": "semantic-release-config"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ProfessorManhattan/common-angular.git"
-  },
-  "scripts": {
-    "build": "bash start.sh && task donothing",
-    "bump": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version --force && npm publish",
-    "commit": "bash start.sh && task commit",
-    "fix": "bash start.sh && task fix",
-    "help": "bash start.sh && task --menu",
-    "lint": "bash start.sh && task list",
-    "preload": "bash start.sh && task preload",
-    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "prepublishOnly": "test -z SKIP_NPM_PREPUBLISHONLY && bash start.sh && task npm:bundle:create || true",
-    "publish": "task publish:semantic-release",
-    "release": "bash start.sh && task publish:semantic-release",
-    "repair": "bash <(curl -sS https://install.doctor/repair)",
-    "start": "test -z SKIP_NPM_START && bash start.sh || true",
-    "test": "bash start.sh && task donothing",
-    "unpack": "bash start.sh && task npm:bundle:unpack",
-    "update": "bash start.sh && task update"
-  },
-  "type": "module",
-  "version": "0.0.1"
+  }
 }
