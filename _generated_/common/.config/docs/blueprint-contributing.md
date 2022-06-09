@@ -10,3 +10,4 @@
 {{ load:.config/docs/contributing/commenting.md }}
 {{ load:.config/docs/contributing/testing.md }}
 {{ load:.config/docs/contributing/linting.md }}
+{{ load:.config/docs/common/contributing/troubleshooting.md }}
