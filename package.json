@@ -1,5 +1,83 @@
 {
+  "private": false,
+  "name": "@installdoc/common-angular",
+  "version": "0.0.1",
+  "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
+  "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
+  "homepage": "https://megabyte.space",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megabyte-labs/common-angular.git"
+  },
+  "bugs": {
+    "email": "help@megabyte.space",
+    "url": "https://gitlab.com/megabyte-labs/common/angular/-/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "bash start.sh && task donothing",
+    "bump": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version --force && npm publish",
+    "commit": "bash start.sh && task commit",
+    "fix": "bash start.sh && task fix",
+    "help": "bash start.sh && task --menu",
+    "lint": "bash start.sh && task lint",
+    "preload": "bash start.sh && task preload",
+    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
+    "release": "bash start.sh && task publish:semantic-release",
+    "repair": "bash <(curl -sS https://install.doctor/repair)",
+    "start": "test -z $SKIP_NPM_START && bash start.sh || true",
+    "test": "bash start.sh && task donothing",
+    "unpack": "bash start.sh && task npm:bundle:unpack",
+    "update": "bash start.sh && task update",
+    "vscode": "bash start.sh && task vscode"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/git-cz-emoji"
+    }
+  },
+  "dependencies": {
+    "tslib": "latest"
+  },
+  "optionalDependencies": {},
+  "devDependencies": {
+    "@commitlint/config-conventional": "latest",
+    "eslint-config-strict-mode": "latest",
+    "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
+    "prettier-config-sexy-mode": "latest",
+    "semantic-release-config": "latest",
+    "typescript": "^4.5.5"
+  },
+  "keywords": [
+    "angular",
+    "awesome",
+    "boilerplate",
+    "browser-extensions",
+    "cordova",
+    "cross-platform",
+    "firebase",
+    "mblabs",
+    "megabytelabs",
+    "menubar",
+    "npm",
+    "package",
+    "professormanhattan",
+    "washingtondc",
+    "webapp"
+  ],
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "publishConfig": {
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
+    "@megabyte:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
+    "@private:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "edge"
+  },
   "blueprint": {
     "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
     "emoji_end": "🔥❤️🤖",
@@ -21,10 +99,6 @@
     "subgroup": "angular",
     "title": "Angular Common Files and Boilerplate Code"
   },
-  "bugs": {
-    "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/common/angular/-/issues"
-  },
   "changelog": {
     "displayTypes": [
       "feat",
@@ -36,29 +110,10 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/git-cz-emoji"
-    }
-  },
-  "dependencies": {
-    "tslib": "latest"
-  },
-  "description": "Common Angular files and awesome boilerplate code that feeds a large group of repositories",
-  "devDependencies": {
-    "eslint-config-strict-mode": "latest",
-    "git-cz-emoji": "latest",
-    "prettier-config-sexy-mode": "latest",
-    "semantic-release-config": "latest",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
-  },
-  "engines": {
-    "node": ">=14.18.0"
   },
   "eslintConfig": {
     "extends": "eslint-config-strict-mode",
@@ -78,29 +133,10 @@
       "url": "https://www.patreon.com/ProfessorManhattan"
     }
   ],
-  "homepage": "https://megabyte.space",
   "jscpd": {
     "gitignore": true,
     "threshold": 0.1
   },
-  "keywords": [
-    "angular",
-    "awesome",
-    "boilerplate",
-    "browser-extensions",
-    "cordova",
-    "cross-platform",
-    "firebase",
-    "mblabs",
-    "megabytelabs",
-    "menubar",
-    "npm",
-    "package",
-    "professormanhattan",
-    "washingtondc",
-    "webapp"
-  ],
-  "license": "MIT",
   "lint-staged": {
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
       "task fix:prettier --"
@@ -171,7 +207,6 @@
       "task image:compress --"
     ]
   },
-  "name": "@installdoc/common-angular",
   "ntl": {
     "descriptions": {
       "build": "Builds the project using the build command specified under scripts in package.json",
@@ -191,7 +226,6 @@
       "update": "Update and refresh the repository with upstream changes and templated parts"
     }
   },
-  "optionalDependencies": {},
   "pnpm": {
     "allowedVersions": {
       "@typescript-eslint/eslint-plugin": "5",
@@ -212,15 +246,6 @@
     }
   },
   "prettier": "prettier-config-sexy-mode",
-  "private": false,
-  "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
-    "@megabyte:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
-    "@private:registry": "https://gitlab.com/api/v4/projects/25919187/packages/npm/",
-    "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "tag": "edge"
-  },
   "release": {
     "branches": [
       "main",
@@ -233,29 +258,6 @@
     ],
     "extends": "semantic-release-config"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/megabyte-labs/common-angular.git"
-  },
-  "scripts": {
-    "build": "bash start.sh && task donothing",
-    "bump": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version --force && npm publish",
-    "commit": "bash start.sh && task commit",
-    "fix": "bash start.sh && task fix",
-    "help": "bash start.sh && task --menu",
-    "lint": "bash start.sh && task lint",
-    "preload": "bash start.sh && task preload",
-    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "release": "bash start.sh && task publish:semantic-release",
-    "repair": "bash <(curl -sS https://install.doctor/repair)",
-    "start": "test -z $SKIP_NPM_START && bash start.sh || true",
-    "test": "bash start.sh && task donothing",
-    "unpack": "bash start.sh && task npm:bundle:unpack",
-    "update": "bash start.sh && task update",
-    "vscode": "bash start.sh && task vscode"
-  },
-  "type": "module",
-  "version": "0.0.1",
   "volta": {
     "node": "18.4.0",
     "yarn": "1.22.19"
