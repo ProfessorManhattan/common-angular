@@ -24,16 +24,16 @@
     <img alt="Version: {{ pkg.version }}" src="https://img.shields.io/badge/version-{{ pkg.version }}-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAACNJREFUCNdjIACY//+BEp9hhM3hAzYQwoBIAqEDYQrCZLwAAGlFKxU1nF9cAAAAAElFTkSuQmCC&cacheSeconds=2592000&style={{ alt_badge_style }}" />
   </a>
   <a title="GitLab build status" href="{{ repository.gitlab }}{{ repository.location.commits.gitlab }}" target="_blank">
-    <img alt="Linux Molecule test status" src="https://img.shields.io/gitlab/pipeline-status/{{ HANDLEBARS_PATH }}?branch=master&label=build&logo=gitlab=&style={{ alt_badge_style }}">
+    <img alt="Linux Molecule test status" src="https://img.shields.io/gitlab/pipeline-status/{{ HANDLEBARS_PATH }}?branch=master&label=build&logo=gitlab=&style={{ alt_badge_style }}" />
   </a>
   <a title="Test coverage report" href="{{ repository.gitlab }}{{ repository.location.commits.gitlab }}" target="_blank">
-    <img alt="Coverage status" src="https://img.shields.io/gitlab/coverage/{{ PATH_HANDLEBARS }}/master/?label=coverage&logo=jest&style={{ alt_badge_style }}">
+    <img alt="Coverage status" src="https://img.shields.io/gitlab/coverage/{{ PATH_HANDLEBARS }}/master/?label=coverage&logo=jest&style={{ alt_badge_style }}" />
   </a>
   <a title="Vulnerabilities detected by Snyk" href="https://snyk.io/advisor/npm-package/angular-cli" target="_blank">
-    <img alt="Vulnerabilities" src="https://img.shields.io/snyk/vulnerabilities/npm/angular-cli?label=snyk&logo=snyk&style={{ alt_badge_style }}">
+    <img alt="Vulnerabilities" src="https://img.shields.io/snyk/vulnerabilities/npm/angular-cli?label=snyk&logo=snyk&style={{ alt_badge_style }}" />
   </a>
   <a title="Dependency status" href="https://libraries.io/npm/angular-cli" target="_blank">
-    <img alt="Dependencies" src="https://img.shields.io/librariesio/release/npm/angular-cli?label=deps&logo=librariesdotio&style={{ alt_badge_style }}">
+    <img alt="Dependencies" src="https://img.shields.io/librariesio/release/npm/angular-cli?label=deps&logo=librariesdotio&style={{ alt_badge_style }}" />
   </a>
   <a title="Documentation" href="{{ link.docs }}/{{ group }}" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?logo=readthedocs&style={{ alt_badge_style }}" />
